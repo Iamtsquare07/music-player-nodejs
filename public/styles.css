@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&display=swap');
+
+body {
+    padding: 10px;
+    background-color: #000014;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgba(255, 217, 0, 0.61);
+    font-family: 'Croissant One', cursive;
+}
+
+.music-player {
+    margin: auto;
+    width: 90%;
+    margin-top: 30px;
+    background-color: #00006e;
+    padding:20px 20px 50px 30px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 1px #1b37b4;
+    color: #cecff8;
+}
+
+.music-player:hover {
+    box-shadow: 1px 1px 15px 2px #3048b1;
+}
+
+h1 {
+    text-align: center;
+}
+
+.playlist {
+    display: flex;
+    padding: 10px;
+}
+
+.playlist img {
+    width: 100px;
+    height: auto;
+    border-radius:5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#playlist-name {
+    margin-bottom: 25px;
+    font-family: 'Croissant One', cursive;
+    color: rgba(229, 255, 0, 0.61);
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+
+.song-list {
+    margin-top: 15px;
+    height: 140px;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 2px; /* Width of the scrollbar */
+  }
+  
+  /* Style the scrollbar thumb (the draggable part) */
+  ::-webkit-scrollbar-thumb {
+    background: #3551f185; /* Color of the scrollbar thumb */
+    border-radius: 6px; /* Rounded corners of the thumb */
+  }
+  
+  /* Style the scrollbar track when hovering over it */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+#playlist li {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+ol {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    cursor: pointer;
+    padding: 5px;
+    margin: 5px;
+    background-color: #00002e;
+    border-radius: 3px;
+}
+
+li:hover {
+    background-color: #01014e;
+}
+
+.controls {
+    text-align: center;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto .1fr auto;
+}
+
+.player-menu {
+    color: rgba(255, 217, 0, 0.61);
+    font-family: 'Croissant One', cursive;
+    width: 80%;
+    padding: 10px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+i {
+    cursor: pointer;
+}
+
+#pause {
+    background:none;
+}
+
+.controls-top {
+    margin: auto;
+    width: fit-content;
+}
+
+.controls-top i {
+    font-size: 25px;
+}
+
+.active {
+    color: rgba(255, 217, 0, 0.61);
+}
+
+.like-button {
+    text-align: right;
+}
+
+#like {
+    visibility: hidden;
+    text-align: left;
+}
+
+#audio-player {
+    background-color:#00006e;
+    height: 15px;
+    border-radius: 3px;
+}
+
+audio {
+    border-radius:0px;
+}
+/* Hide the play button */
+audio::-webkit-media-controls-play-button {
+    display: none;
+}
+
+/* Hide the download button */
+audio::-webkit-media-controls-download-button {
+    visibility: hidden;
+}
+
+/* Styles for the modal and overlay */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    margin: auto;
+    width: 90%;
+    margin-top: 80px;
+    background-color: #00006e;
+    padding:20px 20px 50px 30px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 1px #1b37b4;
+    color: #cecff8;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.playing {
+    margin: auto;
+    width: fit-content;
+}
+
+
+@media only screen and (min-width: 1024px) {
+    body {
+        overflow-y: hidden;
+    }
+    .music-player {
+        min-width: 500px;
+        width: 40%;
+    }
+
+    .modal-content {
+        min-height: 500px;
+        width: 45%;
+    }
+
+}
