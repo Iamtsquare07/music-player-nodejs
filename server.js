@@ -8,7 +8,6 @@ const port = 3000;
 app.use(express.static("public")); // Serve your HTML and client-side JS files from the "public" folder
 
 app.get("/", (req, res) => {
-    // Replace "index.html" with the actual name of your HTML file
     const indexPath = path.join(__dirname, "public", "index.html");
     fs.readFile(indexPath, "utf8", (err, data) => {
         if (err) {
@@ -23,7 +22,7 @@ app.get("/", (req, res) => {
 
 
 app.get("/songs", (req, res) => {
-    const songsFolder = path.join(__dirname, "public/songs"); // Replace with the actual path to your "songs" folder
+    const songsFolder = path.join(__dirname, "public/songs");
     fs.readdir(songsFolder, (err, files) => {
         if (err) {
             console.error("Error reading songs folder:", err);
