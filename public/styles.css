@@ -14,6 +14,7 @@ h1 {
     margin-bottom: 20px;
     color: rgba(255, 217, 0, 0.61);
     font-family: 'Croissant One', cursive;
+    font-size: 5vw;
 }
 
 .music-player {
@@ -21,7 +22,7 @@ h1 {
     width: 90%;
     margin-top: 30px;
     background-color: #00006e;
-    padding:20px 20px 50px 30px;
+    padding: 20px 20px 50px 30px;
     border-radius: 10px;
     box-shadow: 1px 1px 5px 1px #1b37b4;
     color: #cecff8;
@@ -43,7 +44,7 @@ h1 {
 .playlist img {
     width: 100px;
     height: auto;
-    border-radius:5px;
+    border-radius: 5px;
     margin-right: 10px;
     cursor: pointer;
 }
@@ -64,19 +65,22 @@ h1 {
 }
 
 ::-webkit-scrollbar {
-    width: 2px; /* Width of the scrollbar */
-  }
-  
-  /* Style the scrollbar thumb (the draggable part) */
-  ::-webkit-scrollbar-thumb {
-    background: #3551f185; /* Color of the scrollbar thumb */
-    border-radius: 6px; /* Rounded corners of the thumb */
-  }
-  
-  /* Style the scrollbar track when hovering over it */
-  ::-webkit-scrollbar-thumb:hover {
+    width: 2px;
+    /* Width of the scrollbar */
+}
+
+/* Style the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+    background: #3551f185;
+    /* Color of the scrollbar thumb */
+    border-radius: 6px;
+    /* Rounded corners of the thumb */
+}
+
+/* Style the scrollbar track when hovering over it */
+::-webkit-scrollbar-thumb:hover {
     background: #555;
-  }
+}
 
 #playlist li {
     display: grid;
@@ -131,7 +135,7 @@ i {
 }
 
 #pause {
-    background:none;
+    background: none;
 }
 
 .controls-top {
@@ -157,14 +161,15 @@ i {
 }
 
 #audio-player {
-    background-color:#00006e;
+    background-color: #00006e;
     height: 15px;
     border-radius: 3px;
 }
 
 audio {
-    border-radius:0px;
+    border-radius: 0px;
 }
+
 /* Hide the play button */
 audio::-webkit-media-controls-play-button {
     display: none;
@@ -193,7 +198,7 @@ audio::-webkit-media-controls-download-button {
     width: 90%;
     margin-top: 80px;
     background-color: #00006e;
-    padding:20px 20px 50px 30px;
+    padding: 20px 20px 50px 30px;
     border-radius: 10px;
     box-shadow: 1px 1px 5px 1px #1b37b4;
     color: #cecff8;
@@ -223,6 +228,11 @@ audio::-webkit-media-controls-download-button {
     body {
         overflow-y: hidden;
     }
+
+    h1 {
+        font-size: 30px;
+    }
+
     .music-player {
         min-width: 500px;
         width: 40%;
